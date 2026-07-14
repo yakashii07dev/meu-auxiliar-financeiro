@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Auxiliar Financeiro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Ícones -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Cabeçalho -->
+        <header>
+
+            <h1>
+                <i class="fa-solid fa-wallet"></i>
+                Meu Auxiliar Financeiro
+            </h1>
+
+            <p>
+                Organize seu dinheiro de forma simples.
+            </p>
+
+        </header>
+
+
+        <!-- Cards financeiros -->
+        <section class="cards">
+
+
+            <div class="card saldo">
+
+                <h3>Saldo</h3>
+
+                <h2 id="saldo">
+                    R$ 0,00
+                </h2>
+
+            </div>
+
+
+            <div class="card receita">
+
+                <h3>Receitas</h3>
+
+                <h2 id="receitas">
+                    R$ 0,00
+                </h2>
+
+            </div>
+
+
+            <div class="card despesa">
+
+                <h3>Despesas</h3>
+
+                <h2 id="despesas">
+                    R$ 0,00
+                </h2>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- Auxiliar financeiro -->
+
+        <section class="auxiliar">
+
+            <h2>
+                🤖 Auxiliar Financeiro
+            </h2>
+
+
+            <p id="mensagemAuxiliar">
+                Adicione seus gastos para receber dicas.
+            </p>
+
+
+        </section>
+
+
+
+
+        <!-- Formulário -->
+
+        <section class="formulario">
+
+
+            <h2>
+                Nova Movimentação
+            </h2>
+
+
+            <form id="formMovimentacao">
+
+
+                <label for="tipo">
+                    Tipo
+                </label>
+
+
+                <select id="tipo">
+
+                    <option>
+                        Receita
+                    </option>
+
+                    <option>
+                        Despesa
+                    </option>
+
+                </select>
+
+
+
+
+                <label for="categoria">
+                    Categoria
+                </label>
+
+
+                <select id="categoria">
+
+                    <option>
+                        Alimentação
+                    </option>
+
+                    <option>
+                        Moradia
+                    </option>
+
+                    <option>
+                        Transporte
+                    </option>
+
+                    <option>
+                        Saúde
+                    </option>
+
+                    <option>
+                        Lazer
+                    </option>
+
+                    <option>
+                        Compras
+                    </option>
+
+                    <option>
+                        Outros
+                    </option>
+
+
+                </select>
+
+
+
+
+                <label for="descricao">
+                    Descrição
+                </label>
+
+
+                <input 
+                    type="text"
+                    id="descricao"
+                    placeholder="Ex.: Mercado, Salário">
+
+
+
+
+
+                <label for="valor">
+                    Valor
+                </label>
+
+
+                <input 
+                    type="number"
+                    id="valor"
+                    placeholder="0,00">
+
+
+
+
+
+                <label for="data">
+                    Data
+                </label>
+
+
+                <input 
+                    type="date"
+                    id="data">
+
+
+
+
+
+                <button type="submit">
+
+                    Adicionar
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+
+
+
+        <!-- Histórico -->
+
+        <section class="historico">
+
+
+            <h2>
+                Histórico
+            </h2>
+
+
+
+            <table>
+
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Tipo
+                        </th>
+
+                        <th>
+                            Categoria
+                        </th>
+
+                        <th>
+                            Descrição
+                        </th>
+
+                        <th>
+                            Valor
+                        </th>
+
+                        <th>
+                            Data
+                        </th>
+
+                        <th>
+                            Ação
+                        </th>
+
+
+                    </tr>
+
+
+                </thead>
+
+
+
+                <tbody id="historico">
+
+
+                </tbody>
+
+
+
+            </table>
+
+
+
+        </section>
+
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
